@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-gold-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 hover:from-primary-600 hover:to-gold-600;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-primary-500 text-primary-500 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-primary-500 hover:text-white hover:shadow-xl hover:scale-105;
+  }
+  
+  .section-padding {
+    @apply py-20 px-4 md:px-8 lg:px-16;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-500 to-gold-500 bg-clip-text text-transparent;
+  }
+  
+  .shadow-luxury {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
